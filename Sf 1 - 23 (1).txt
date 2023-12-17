@@ -10,19 +10,16 @@ echo "Current user: $USER"
 echo "Login name: $LOGNAME"
 
 
-
-
 4.  current shell, home directory, operating system type, current path setting, current working directory. 
 echo "Current shell: $SHELL"
 echo "Home directory: $HOME"
 echo "Operating system type: $(uname -o)"
 echo "Current path setting: $PATH"
 echo "Current working directory: $PWD"
+
 5.  OS version, release number, kernel version. 
 cat /etc/os-release
 uname -r
-
-
 
 
 6. Write a command to  the first 15 columns from each line in the file 
@@ -36,9 +33,6 @@ uname -r
 10. copying files from one place to another, 
  cp 1.txt  /Users/ruhidoshi/Desktop/study\ material\ /SF 
 
-
-
-
 11.moving files from one place to another. 
 mv 1.txt /Users/ruhidoshi/Desktop/study\ material\ /SF
 
@@ -46,6 +40,7 @@ mv 1.txt /Users/ruhidoshi/Desktop/study\ material\ /SF
 12. Removing specific directory with various options 
 1    rmdir  directory name 
 2    mkdir  directory name 
+3    rm -ri directory_name
 
 
 13.list the numbers of users currently login in the system and then sort it.
