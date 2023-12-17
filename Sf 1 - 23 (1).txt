@@ -1,0 +1,110 @@
+﻿Sf  (1 - 23) 
+1.  top 10 processes in descending order
+    ps aux --sort=-%cpu | head -n 11
+ 2.  processes with highest memory usage.
+    ps aux --sort=-%mem | head -n 11
+3.  current logged in user and logname. 
+
+
+echo "Current user: $USER"
+echo "Login name: $LOGNAME"
+
+
+
+
+4.  current shell, home directory, operating system type, current path setting, current working directory. 
+echo "Current shell: $SHELL"
+echo "Home directory: $HOME"
+echo "Operating system type: $(uname -o)"
+echo "Current path setting: $PATH"
+echo "Current working directory: $PWD"
+5.  OS version, release number, kernel version. 
+cat /etc/os-release
+uname -r
+
+
+
+
+6. Write a command to  the first 15 columns from each line in the file 
+ cut -c 1-15  1.txt
+7. cut specified columns from a file and  them 
+  cut -c 1-5 1.txt
+8. Sort given file ignoring upper and lower case 
+  sort -f 1.txt
+9. s only directories in the current working directory. 
+  ls -d */
+10. copying files from one place to another, 
+ cp 1.txt  /Users/ruhidoshi/Desktop/study\ material\ /SF 
+
+
+
+
+11.moving files from one place to another. 
+mv 1.txt /Users/ruhidoshi/Desktop/study\ material\ /SF
+
+
+12. Removing specific directory with various options 
+1    rmdir  directory name 
+2    mkdir  directory name 
+
+
+13.list the numbers of users currently login in the system and then sort it.
+   who | cut -d' ' -f1 | sort
+
+
+ 14.Merge two files into one file 
+// creating a file in the terminal 
+echo -e "Vivan efficltricies nisi metus in est.\n" > file2.txt
+
+
+cat file1.txt file2.txt > merged_file.txt
+
+
+
+
+15. changes the access mode of one file 
+chmod 755  file1.txt
+
+
+ls -l file1.txt
+
+
+
+
+16.  the last ten lines of the file. 
+tail -n 10 file2.txt
+
+
+17.to locate files in a directory and in a subdirectory. 
+find /path/to/directory -type f
+
+
+18.This  displays the contents of all files having a name starting with ap followed by any number of characters. 
+cat ap* 
+cat ap* AP* ./*ap*
+
+
+
+
+19. Rename any file aaa to aaa.aa1, where aa1 is the user login name
+mv aaa.txt aaa.$(whoami)
+
+
+20. Write a command to search the word ‘picture’ in the file and if found, the lines containing it would be displayed on the screen.
+grep 'picture' 11.txt
+
+
+
+
+ 21. Write a command to search for all occurrences of ‘Rebecca’ as well as ‘rebecca’ in file and display the lines which contain one of these words.
+grep -i 'Rebecca' 11.txt
+
+
+
+
+ 22. Write a command to search all four-letter words whose first letter is a ‘b’ and last letter, a ‘k’. 
+grep -w 'b..k' 11.txt
+
+
+23. Write a command to see only those lines which do not contain the search patterns
+  grep -v ‘pattern’ 11.txt
